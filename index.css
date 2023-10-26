@@ -1,65 +1,76 @@
 body {
-    margin: 0;
-    background: #F4F4F4;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+/* remove input number arrows Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* remove input number arrows Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .header {
-    background: #6943FF;
-    height: 285px; 
-    width: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 5px gray;
-    text-align: center;
+  background: #6943ff;
+  height: 285px;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px gray;
+  text-align: center;
 }
 
 .header input {
-    border: 1px solid white;
-    border-radius: 5px;
-    background: #6943FF;
-    color: white;
-    width: 117px;
-    height: 83px;
-    font-weight: bolder;
-    font-size: 58px;
-    text-align: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: #6943ff;
+  color: white;
+  width: 117px;
+  height: 83px;
+  font-weight: bolder;
+  font-size: 58px;
+  text-align: center;
 }
 
 .header button {
-    background: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    margin: 30px 0px;
-    height: 42px;
-    width: 117px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin: 30px 0px;
+  height: 42px;
+  width: 117px;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .output {
-    background: #FFFFFF;
-    margin: 15px 25px;
-    padding: 10px;
-    width: 500px;
-    height: 108px;
-    text-align: center;
-    
+  background: #ffffff;
+  margin: 15px 25px;
+  padding: 10px;
+  width: 500px;
+  height: 108px;
+  text-align: center;
 }
 
 .output h3 {
-    color: #5A537B;
-    font-size: 20px;
+  color: #5a537b;
+  font-size: 20px;
 }
 
 .output p {
-    font-size: 14px;
+  font-size: 14px;
 }
