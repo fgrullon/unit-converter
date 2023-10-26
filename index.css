@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background: #f4f4f4;
+  font-family: "Inter", sans-serif;
 }
 
 /* remove input number arrows Chrome, Safari, Edge, Opera */

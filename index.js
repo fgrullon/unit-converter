@@ -4,28 +4,33 @@
 1 kilogram = 2.204 pound
 */
 
-const convertBtn = document.querySelector("#convert-btn")
-const inputEl = document.querySelector("#convert-input")
-const lengthEl = document.querySelector("#length-p")
-const volumeEl = document.querySelector("#volume-p")
-const massEl = document.querySelector("#mass-p")
+const convertBtn = document.querySelector("#convert-btn");
+const inputEl = document.querySelector("#convert-input");
+const lengthEl = document.querySelector("#length-p");
+const volumeEl = document.querySelector("#volume-p");
+const massEl = document.querySelector("#mass-p");
 
-convertBtn.addEventListener("click", function(){
-    const value = Number(inputEl.value)
-    formatLength(value)
-    formatVolume(value)
-    formatMass(value)
-})
+convertBtn.addEventListener("click", function () {
+  const value = Number(inputEl.value);
+  formatLength(value);
+  formatVolume(value);
+  formatMass(value);
+});
 
-function formatLength(value){
-    lengthEl.textContent = `${value} meters = ${value * 3.281} feet | ${value} feet = ${value * 0.3048} meters`
+function formatLength(value) {
+  const feet = (value * 3.281).toFixed(3);
+  const meters = (value * 0.3048).toFixed(3);
+  lengthEl.textContent = `${value} meters = ${feet} feet | ${value} feet = ${meters} meters`;
 }
 
-function formatVolume(value){
-    volumeEl.textContent = `${value} liters = ${value * 0.264} gallons | ${value} gallons = ${value * 3.7854} liters`
+function formatVolume(value) {
+  const gallons = (value * 0.264).toFixed(3);
+  const liters = (value * 3.7854).toFixed(3);
+  volumeEl.textContent = `${value} liters = ${gallons} gallons | ${value} gallons = ${liters} liters`;
 }
 
-function formatMass(value){
-    massEl.textContent = `${value} kilos = ${value * 2.2046} pounds | ${value} pounds = ${value * 0.4536} kilos`
+function formatMass(value) {
+  const pounds = (value * 2.2046).toFixed(3);
+  const kilos = (value * 0.4536).toFixed(3);
+  massEl.textContent = `${value} kilos = ${pounds} pounds | ${value} pounds = ${kilos} kilos`;
 }
-
